@@ -1,0 +1,10 @@
+.btn {
+    background-color: #61dafb;
+    font-size: 25px;
+    font-family: "Candara Light";
+    border-radius: 5px;
+}
+
+.btn.btn-small{
+    font-size: 15px;
+}

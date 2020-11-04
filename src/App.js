@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from "./header/Header";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
+import Content from "./content/Content";
+import Footer from "./footer/Footer";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const menus = [
+        {
+            title: 'Home',
+            active: 'active'
+        },
+        {
+            title: 'Contact us',
+            active: ''
+        },
+        {
+            title: 'About us',
+            active: ''
+        },
+
+    ]
+    return (
+        <div className="App">
+            <Header menus={menus} title="MAKE YOUR FOOD"/>
+            <Content/>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;
